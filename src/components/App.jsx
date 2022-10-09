@@ -1,17 +1,24 @@
-import ContactForm from './ContactForm/ContactForm';
-import Filter from './Filter/Filter';
-import ContactList from './ContactList/ContactList';
+import { Routes, Route } from 'react-router';
+import Navigation from './Navigation/Navigation';
+import Registration from './Registration/Registration';
+import Login from './Login/Login';
+import Contacts from './Contacts/Contacts';
 
 const App = () => {
   return (
-    <div className="container">
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <h2>Contacts</h2>
-      <Filter />
-      <ContactList />
-    </div>
+    <>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Registration />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="*" element={<Registration />} />
+      </Routes>
+    </>
   );
 };
 
 export default App;
+// "name": "react-homework-template",
+// "homepage": "https://skazzp.github.io/goit-react-hw-08-phonebook/",

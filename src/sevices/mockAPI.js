@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://633d8a3f7e19b1782910ceed.mockapi.io/';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 export const addContactAPI = async data => {
   try {
@@ -21,6 +21,28 @@ export const removeContactAPI = async id => {
   try {
     await axios.delete(`contacts/${id}`);
     return id;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const registerAPI = async data => {
+  try {
+    await axios.post(`/users/signup`, data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+export const loginAPI = async data => {
+  try {
+    await axios.post(`/users/login`, data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+export const logoutAPI = async () => {
+  try {
+    await axios.post(`/users/logout`);
   } catch (error) {
     console.log(error);
   }

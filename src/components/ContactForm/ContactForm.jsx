@@ -1,4 +1,4 @@
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 import { useState } from 'react';
 import css from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
@@ -14,9 +14,8 @@ const ContactsForm = () => {
     const contact = {
       name,
       number,
-      id: nanoid(),
+      // id: nanoid(),
     };
-    // console.log(contact);
     dispatch(addContact(contact));
     resetForm();
   };
