@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { register } from 'redux/auth/operations';
 
 const Registration = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
   const handleChange = e => {
     switch (e.target.name) {
       case 'name':
@@ -19,6 +22,7 @@ const Registration = () => {
   const handleFormSubmit = e => {
     e.preventDefault();
     const user = { name, email, password };
+    dispatch(register(user));
     console.log(user);
   };
   return (
