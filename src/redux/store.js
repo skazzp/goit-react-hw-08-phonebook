@@ -2,7 +2,7 @@ import filterReducer from './filterSlice';
 import contactsReducer from './contactsSlice';
 import authReducer from './auth/slice';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+import storage from 'redux-persist/lib/storage';
 import {
   persistStore,
   persistReducer,
