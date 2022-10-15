@@ -12,14 +12,15 @@ export const Logout = styled.button`
   align-items: center;
   border-radius: 4px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   width: 90px;
   height: 40px;
-  color: white;
+  color: snow;
+  cursor: pointer;
   background-color: #146fac;
   border: none;
 `;
 export const Text = styled.p`
   font-size: 15px;
-  color: #072f49;
+  color: #cce7f8;
 `;
