@@ -18,9 +18,7 @@ export const Link = styled(NavLink)`
   }
 `;
 export const Header = styled.header`
-  background-color: #3f3a3ab9;
-`;
-export const HeaderBox = styled.div`
+  background-color: #272424b9;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -6,10 +6,15 @@ import { Container } from './Contacts.styled';
 const Contacts = () => {
   return (
     <Container>
-      <ContactsForm />
-      <h2>Contacts</h2>
-      <Filter />
-      <ContactList />
+      <div>
+        <h2>Add contact</h2>
+        <ContactsForm />
+      </div>
+      <div>
+        <h2>Contacts</h2>
+        <Filter />
+        <ContactList />
+      </div>
     </Container>
   );
 };

@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts, removeContact } from 'redux/operations';
-
 import css from './ContactList.module.css';
+import { Item, List, Name, Number } from './ContactList.styled';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -20,12 +20,16 @@ const ContactList = () => {
     dispatch(getContacts());
   }, [dispatch]);
   return (
-    <ul className={css.list}>
+    <List>
+      <Item>
+        <Name>Name</Name>
+        <Name>Number</Name>
+      </Item>
       {filteredContacts.map(contact => {
         return (
-          <li key={contact.id} className={css.item}>
-            <span className={css.name}>{contact.name} : </span>
-            <span>{contact.number}</span>
+          <Item key={contact.id}>
+            <Name className={css.name}>{contact.name} : </Name>
+            <Number>{contact.number}</Number>
             <button
               type="button"
               onClick={() => {
@@ -34,10 +38,10 @@ const ContactList = () => {
             >
               Delete
             </button>
-          </li>
+          </Item>
         );
       })}
-    </ul>
+    </List>
   );
 };
 

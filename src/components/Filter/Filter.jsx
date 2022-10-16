@@ -10,15 +10,18 @@ const Filter = () => {
   };
   const filterState = useSelector(state => state.filter);
   return (
-    <label htmlFor="filter">
-      <p className={css.label}>Find contacts by name</p>
-      <input
-        type="text"
-        name="filter"
-        value={filterState}
-        onChange={handleInput}
-      />
-    </label>
+    <>
+      {/* <h2>Contacts</h2>{' '} */}
+      <label htmlFor="filter">
+        <p className={css.label}>Find contacts by name</p>
+        <input
+          type="text"
+          name="filter"
+          value={filterState}
+          onChange={handleInput}
+        />
+      </label>
+    </>
   );
 };
 
